@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Prepration QUS.</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Q.1 = Difference between “ == “ and “ === “ operators.</h1> 
+    <p>In JavaScript, the "==" operator is used to compare the values of two operands</p>
+    <p> whereas the "===" operator is used to compare both the values and the data types of the operands.</p>
+    <p>== is a Strictally operater <b>and</b> === is a Equality operaters.</p>
+    <h2>EXP.</h2>
+    <pre>
+
+        let a = "10";
+        let b = "10";
+
+       console.log(typeof(a));//Number
+       console.log(typeof(b));//String
+
+      console.log(a == b); 
+       console.log(a === b);  
+
+    </pre>
+    <hr>
+
+    <h1>Q.2 =  What are the differences between var, let and const?</h1>
+    <pre>
+        <b>VAR - </b> 
+    1. Redeclare and reinitilized
+    2. Global scope and Function Scope
+    3. Hoisting
+    4. Used before introduce ES6
+    </pre>
+    <pre>
+<b> let </b>
+    1. not Redeclare and reinitilized
+    2. no Hoisting
+    3. Block scope, Global Scope
+    4. TDZ
+    5. introduce in ES6
+    </pre>
+    <pre>
+ <b> const </b>
+    1. not Redeclare and Not reinitilized 
+    2. no Hoisting
+    3. Block scope, Global Scope
+    4. TDZ
+    5. introduce in ES6
+    </pre>
+
+
+    <h2>EXP.</h2>
+    Var
+   <b> 1. Redeclare and reinitilized </b>   
+  <pre>
+   var x = 10;
+   var x = 20;  // Redeclare
+  x = 30;  // reinitilized
+</pre>
+
+<b>2. Global scope and Function Scope</b>
+<pre>
+ var ABC = 10;
+ let PQR = 20;
+const XYZ = 30;
+</pre>
+<b>3. Function Scope</b>
+<pre>
+function funcScope(){
+    var ABC = 100;
+    let PQR = 200;
+    const XYZ = 300;
+    console.log(ABC); // 100
+    console.log(PQR); // 200
+    console.log(XYZ); // 300
+}
+funcScope()
+
+console.log(ABC);
+console.log(PQR);
+console.log(XYZ);
+</pre>
+
+<b>4. Block scope</b>
+<pre>
+ if(){}, switch, loop
+
+{
+    var ABC = 100;
+    let PQR = 200;
+    const XYZ = 300;
+    console.log(ABC); // 100
+    console.log(PQR); // 200
+    console.log(XYZ); // 300
+}
+
+console.log(ABC);  // 100
+console.log(PQR); // not define - error
+console.log(XYZ); // not define - error
+
+
+</pre>
+
+<hr>
+
+
+<h1>Q.3 = What is hoisting?</h1>
+<p>
+    oisting is the js mechanism where var and function declaration are moved to top of their scope before code execution.
+    <p>1. function Hoisting</p>
+    <p>2. var keyword Hoisting </p>
+</p>
+
+<h2>EXP.</h2>
+<pre>
+
+    console.log(a);
+ var a = 10;
+
+</pre>
+<hr>
+
+<h1>Q.4 = What is a Temporal Dead Zone?</h1>
+<p>- when trying to acceess a variable before it's decleration with let and const keyword.</p>
+   <p> - introduce to imporve the code quality by detecting & preventing to use variable.</p>
+   <pre>
+    let x;
+console.log(x); // undefined
+x = 10;
+console.log(x); // 10
+   </pre>
+   <hr>
+
+  <h1>Q.5 = What is meant by first class functions</h1> 
+  <p> - Assign a function to a variable is first class function.</p>
+
+
+
+  <hr>
+
+  <h1>Q.6 = What are pure functions?</h1>>
+  <p>A pure function in JavaScript is a function that returns the same result if the same arguments(input) are passed in the function.</p>
+
+    
+    
+    <script src="./script.js"></script>
+</body>
+</html>
